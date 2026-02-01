@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* @tailwind components; */
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -12,15 +14,422 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*--------Animations ROVITAS DE LOS PLANETAS--------- */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin-slower 70s linear infinite;
+}
+.animate-spin-mediumslow {
+  animation: spin-slower 110s linear infinite;
+}
+
+.animate-spin-medium {
+  animation: spin-slower 150s linear infinite;
+}
+.animate-spin-moderate {
+  animation: spin-slower 180s linear infinite;
+}
+
+
+/*--------Animations ROVITAS DE LOS PLANETAS--------- */
+
+@keyframes morph {
+  0%   { border-radius: 60% 40%  20% 30% 70% / 60% 30%4070% 40%; }
+  50%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }
 
 body {
-  background: var(--background);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-size: contain; */
+  transition: background 0.5s ease;
+  /* background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; */
 }
+@import "tailwindcss";
+/* @tailwind components; */
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+.floating-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* -----Los botones flotan libremente --------*/
+.floating-container a {
+  position: relative;
+  animation: drift 8s ease-in-out infinite;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.329);
+  transition: transform 0.3s;
+}
+
+/* Movimiento aleatorio */
+@keyframes drift {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    transform: translate(15px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* Cada globo se mueve de forma distinta */
+.floating-container a:nth-child(1) {
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+.floating-container a:nth-child(2) {
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.floating-container a:nth-child(3) {
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.floating-container a:nth-child(4) {
+  animation-duration: 8.5s;
+  animation-delay: 1.5s;
+}
+
+/* === DESACTIVAR movimiento en pantallas pequeñas === */
+@media (max-width: 768px) {
+  .floating-container a {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+
+
+
+
+/* ---------------- COLOR THEMES ---------------- */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+ /* Tema claro (default) */
+:root {
+  --skin-color: #e3a765;
+  --while:#f2efe2;
+  --gris: #5d6d7c;
+  --label-color:#27272a;
+  --span-color:#FE9A00;
+  --icons-color:#FE9A00;
+  --icons-hover:#fac574;
+  --nav-color: #27272a;
+  --h1-color: #1e1e1e;
+  --h2-color:#fffefe;
+  --p-color:#383838;
+   --foreground: #151212;  
+  --bg-image: url("/images/funds/dark_yellow.png");
+
+}
+
+/* Tema oscuro con next-themes */
+.dark {
+  /* --span-color:#2c2c2f; */
+  --skin-color: #e3a765;
+  --while:#f2efe2;
+  --gris: #5d6d7c;
+  --label-color:#d4d4d8;
+  --icons-color:#2c2c2f;
+  --icons-hover:#5b5b5a;
+  --nav-color: #FE9A00;
+  --h1-color:#FE9A00;
+  --h2-color:#f9f9f9;
+  --p-color:#dddcdb;
+  --foreground: #9f9d9d;
+  --bg-image: url("/images/funds/fonts_dark.png");
+}
+/* ----------------END COLOR THEMES ---------------- */
+
+/* ---------------- TEXT SHADOWS ---------------- */
+@layer utilities {
+  /* modo claro (por defecto, sin sombras) */
+  .text-shadow,
+  .text-shadow-md,
+  .text-shadow-lg,
+  .text-shadow-amber,
+  .text-shadow-white {
+    text-shadow: none;
+    transition: text-shadow 0.3s ease;
+  }
+
+  /* modo oscuro */
+  .dark .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.526);
+  }
+
+  .dark .text-shadow-md {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+.dark .text-shadow-lg {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+.dark .text-shadow-amber {
+    text-shadow: 0 0 10px #fbbf24;
+  }
+
+.dark .text-shadow-white {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.card-bg-one {
+  background-color: var(--while);
+  padding: 2.2cqw;
+  width: 70%;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+
+.dark .card-bg-one {
+  background-color: var(--color-neutral-800);
+}
+
+
+/*--------Animations ORVITAS DE LOS PLANETAS--------- */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+  animation-delay: 0s;
+}
+
+.animate-spin-slower {
+  animation: spin-slower 70s linear infinite;
+  animation-delay: -180s;
+}
+
+.animate-spin-slowermedium {
+  animation: spin-slower 70s linear infinite;
+  animation-delay: -50s;
+}
+
+.animate-spin-mediumslow {
+  animation: spin-slower 110s linear infinite;
+   animation-delay: -20s;
+}
+
+.animate-spin-medium {
+  animation: spin-slower 150s linear infinite;
+  animation-delay: -145s;
+}
+.animate-spin-moderate {
+  animation: spin-slower 180s linear infinite;
+  animation-delay: -100s;
+}
+/*--------Animations ROVITAS DE LOS PLANETAS--------- */
+
+/* ---------------- BASE STYLES ---------------- */
+@layer base {
+  body {
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    transition: background 0.5s ease;
+    color: var(--foreground);
+  }
+
+  h1 {
+    color: var(--h1-color);
+    transition: color 0.3s ease;
+  }
+  h2 {
+    color: var(--h2-color);
+    transition: color 0.3s ease;
+  }
+  p {
+    color: var(--p-color);
+    transition: color 0.3s ease;
+  }
+
+  /* ----------------NAV---------------- */
+  nav{
+    background-color: var(--nav-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .dark\:bg-blue-600 {
+    @media (prefers-color-scheme: dark) {
+        background-color: #27272a !important;
+    }
+}
+
+
+
+  svg{
+    color: var(--icons-color);
+    transition: color 0.3s ease;
+  }
+  svg:hover{
+    color: var(--icons-hover);
+  }
+  span {
+    color: var(--span-color);
+    transition: color 0.3s ease;
+  }
+
+  label {
+    color: var(--label-color);
+    transition: color 0.3s ease;
+  }
+}
+/* ---------------- END BASE STYLES ---------------- */
+
+
+
+
+/* ---------------- css PAY ---------------- */
+
+.nave{
+    width: 120px;
+    height: 120px;
+    background-image: url('/images/imgpay/nave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50vw - 40px);/*pocicion de la nave*/
+}
+
+.bala{
+    width: 5px;
+    height:30px;
+    background-color: rgb(196, 227, 238);
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 9px rgb(59, 70, 175);
+    position: absolute;
+}
+.enemigo{
+    width: 120px;
+    height: 120px;
+    background-image: url('/imgenes/imgpay/asteroide2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+}
+#lives{
+    position: absolute;
+    top:10px;
+    left:10px;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #faf6f6;
+}
+
+i{
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(138, 174, 246);
+    box-shadow: 0px 0px 20px 9px rgb(46, 56, 151);
+
+}
+
+#time {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
