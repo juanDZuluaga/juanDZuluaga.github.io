@@ -118,41 +118,23 @@ export default function BubbleCursor({ isMuted = false }) {
       {/* 💨 Partículas de humo */}
       {mounted &&
         particles.map((p) => (
-          <div
-            key={p.id}
-            className="fixed rounded-full pointer-events-none bg-gray-400"
-            style={{
-              left: p.x,
-              top: p.y,
-              width: `${p.size}px`,
-              height: `${p.size}px`,
-              opacity: 0.5,
-              transform: "translate(-50%, -50%)",
-              animation: "fade 0.6s forwards",
-            }}
+          <div key={p.id} className="fixed rounded-full pointer-events-none bg-gray-400"
+            style={{ left: p.x, top: p.y, width: `${p.size}px`, height: `${p.size}px`, opacity: 0.5, transform: "translate(-50%, -50%)", animation: "fade 0.6s forwards",}}
           />
         ))}
 
       {/* 🚀 Cursor nave */}
       {mounted && (
-        <img
-          src="/images/elements/spaceship.png"
-          alt="cursor"
-          className="fixed pointer-events-none"
-          style={{
-            left: `${pos.x - 25}px`,
-            top: `${pos.y - 25}px`,
-            width: "50px",
-            height: "50px",
-          }}
+        <img src="/images/elements/spaceship.png" alt="cursor" className="fixed pointer-events-none"
+          style={{ left: `${pos.x - 25}px`, top: `${pos.y - 25}px`, width: "50px", height: "50px",}}
         />
       )}
 
       {/* 🎵 Audio */}
       <audio ref={audioRef} src="/sounds/alien.mp3" preload="auto" />
-
       {/* Animación partículas */}
-      <style jsx>{`
+      <style jsx>{
+      `
         @keyframes fade {
           0% {
             opacity: 0.5;
@@ -163,7 +145,8 @@ export default function BubbleCursor({ isMuted = false }) {
             transform: translate(-50%, -50%) scale(2);
           }
         }
-      `}</style>
+      `
+      }</style>
     </>
   );
 }
