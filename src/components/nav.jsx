@@ -140,7 +140,7 @@ export default function Navbar() {
                             )}
                         </li>
                         <li className="relative group">
-                            <a href="/dashboard/professional_profile" className="block py-2 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 dark:hover:bg-gray-700  dark:hover:text-white md:dark:hover:bg-transparent" tooltip="Sobre mi" >
+                            <a href="/dashboard/about_me" className="block py-2 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 dark:hover:bg-gray-700  dark:hover:text-white md:dark:hover:bg-transparent" tooltip="Sobre mi" >
                                 <svg viewBox="0 0 140.45 136.97" fill="currentColor" className="w-10 h-10 transition-colors duration-200">
                                     <path d="M70.19,140.8c-0.7-0.73-1.59-1.36-2.08-2.22c-4.87-8.43-9.74-16.86-14.48-25.37c-1.1-1.97-2.43-2.7-4.66-2.67
                                         c-8.02,0.11-16.05,0.06-24.07,0.04c-4.29-0.01-7.42-2.39-8.39-6.34c-0.2-0.82-0.23-1.71-0.23-2.56

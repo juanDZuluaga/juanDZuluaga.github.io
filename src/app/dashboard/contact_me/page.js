@@ -2,14 +2,12 @@
 import { useEffect, useState } from "react";
 import SoundToggleButton from "@/components/SoundToggleButton";
 import ThemeToggle from "@/components/ThemeToggle";
+import FormContactMe from "@/components/contactMe";
 import BubbleCursor from "@/components/BubbleCursor";
 import Navbar from "@/components/nav";
 import DataFooter from "@/components/footer";
-import FormContactMe from "@/components/contactMe";
 
-
-
-export default function ContactMe() {
+export default function FloatingControls() {
     const [isMuted, setIsMuted] = useState(false);
 
     useEffect(() => {
@@ -17,32 +15,27 @@ export default function ContactMe() {
         if (stored) setIsMuted(JSON.parse(stored));
     }, []);
 
-      useEffect(() => {
-    localStorage.setItem("isMuted", JSON.stringify(isMuted));
-  }, [isMuted]);
+    useEffect(() => {
+        localStorage.setItem("isMuted", JSON.stringify(isMuted));
+    }, [isMuted]);
 
-     return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-
-      <main className="grow pb-32">
-        <h1>contactarme aqui 🥱🥱😫🤑👄</h1>
+    return (
         <div>
-          <FormContactMe />
+            {/* Navbar */}
+            <Navbar />
+            <div className="min-h-screen flex flex-col">
+                <div className="grow">
+                    <FormContactMe />
+                </div>
+                <div className="mt-auto">
+                    <DataFooter />
+                </div>
+                <div className="z-100 fixed bottom-6 right-6 flex flex-col gap-4 items-end">
+                    <SoundToggleButton isMuted={isMuted} toggleMute={() => setIsMuted(v => !v)} />
+                    <ThemeToggle />
+                </div>
+                <BubbleCursor isMuted={isMuted} />
+            </div>
         </div>
-      </main>
-
-      <DataFooter />
-
-      <div className="fixed bottom-6 right-6 z-100 flex flex-col gap-4">
-        <SoundToggleButton
-          isMuted={isMuted}
-          toggleMute={() => setIsMuted(v => !v)}
-        />
-        <ThemeToggle />
-      </div>
-
-      <BubbleCursor isMuted={isMuted} />
-    </div>
-  );
+    );
 }
