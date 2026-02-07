@@ -12,10 +12,7 @@ export default function SoundToggleButton({ isMuted, toggleMute }) {
   if (!mounted) return null; // evita SSR mismatch
 
   return (
-    <button
-        aria-pressed={isMuted}
-        aria-label={isMuted ? "Activar sonido" : "Apagar sonido"}
-        onClick={toggleMute}
+    <button aria-pressed={isMuted} aria-label={isMuted ? "Activar sonido" : "Apagar sonido"}  onClick={toggleMute}
         className="
             fixed
             bottom-20
