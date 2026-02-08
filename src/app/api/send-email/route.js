@@ -8,7 +8,8 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: process.env.MAILER_HOST,
       port: Number(process.env.MAILER_PORT),
-      secure: false, // TLS en 587 o 2525
+      secure: false, // correcto para 587
+      requireTLS: true, // 👈 CLAVE
       auth: {
         user: process.env.MAILER_USER,
         pass: process.env.MAILER_PASS
