@@ -1,10 +1,41 @@
 "use client";
 import { useState } from "react";
+import Swal from "sweetalert2"
+import emailjs, { send } from "@emailjs/browser";
 
 function FormContactMe() {
     const [formContactMe, setFormContactMe] = useState(null);
 
-        
+    const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+        name: e.target.first_name.value,
+        company: e.target.company.value,
+        phone: e.target.phone.value,
+        email: e.target.email.value,
+        message: e.target.message.value
+    };
+
+    try {
+        const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+        Swal.fire("¡Enviado!", "Mensaje enviado correctamente 🚀", "success");
+        e.target.reset();
+        } else {
+        Swal.fire("Error", "No se pudo enviar el mensaje ❌", "error");
+        }
+    } catch (error) {
+        console.error(error);
+        Swal.fire("Error", "No se pudo enviar el mensaje ❌", "error");
+    }
+};
+
     return (
             <div id="contactame" className="mx-auto lg:px-20 mb-15">
                 <h2 className="text-4xl col-span-2 text-center mt-10 lg:mb-20 mb-12">
@@ -51,38 +82,38 @@ function FormContactMe() {
                         </p>
                     </div>
                     <div className="lg:mt-0 mt-10">
-                        <form className="w-full space-y-6">
+                        <form className="w-full space-y-6" onSubmit={sendEmail} >
                             <div className="grid gap-6 mb-6 grid-cols-1 md:grid-cols-2">
                                 <div className="md:col-span-2">
-                                    <label htmlFor="first_name" className="block mb-2 text-sm font-medium">
+                                    <label className="block mb-2 text-sm font-medium">
                                         Nombre completo
                                     </label>
-                                    <input type="text" id="first_name" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. Juan Felipe Restrepo" required />
+                                    <input name="first_name"  type="text" id="first_name" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. Juan Felipe Restrepo" required />
                                 </div>
                                 <div>
-                                    <label htmlFor="company" className="block mb-2 text-sm font-medium">
+                                    <label className="block mb-2 text-sm font-medium">
                                         Compañía o empresa
                                     </label>
-                                    <input type="text" id="company" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white  dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. Flowbite" required />
+                                    <input name="company" type="text" id="company" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white  dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. Flowbite" required />
                                 </div>
                                 <div>
-                                    <label htmlFor="phone" className="block mb-2 text-sm font-medium">
+                                    <label className="block mb-2 text-sm font-medium">
                                         Número del contacto
                                     </label>
-                                    <input type="tel" id="phone" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. 123-45-678" required />
+                                    <input name="phone" type="tel" id="phone" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Ejm. 30045678565 'o' (ind. ciudad) + 2753434" required />
                                 </div>
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                                <label className="block mb-2 text-sm font-medium">
                                     Email address
                                 </label>
-                                <input type="email" id="email" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="juanfelipe.doe@company.com" required/>
+                                <input name="email" type="email" id="email" className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="juanfelipe.doe@company.com" required/>
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="message" className="block mb-2 text-sm font-medium">
+                                <label className="block mb-2 text-sm font-medium">
                                     Mensaje
                                 </label>
-                                <textarea id="message" className="w-full min-h-[150px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Escribe la información con la cual me quieres contactar" required/>
+                                <textarea name="message" id="message" className="w-full min-h-[150px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-amber-700" placeholder="Escribe la información con la cual me quieres contactar" required/>
                             </div>
                             <div className="col-span-2 text-center">
                                 <button type="submit" className="text-white bg-zinc-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-amber-500 dark:hover:bg-amber-400 dark:focus:ring-amber-700">

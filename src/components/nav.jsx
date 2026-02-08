@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* Logo */}
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <Image className="" src="/logos/oscuro-jdz.png"  alt="Flowbite Logo" width={56} height={32} />
+                    <Image className="" src="/logos/oscuro-jdz.png"  alt="Logo" width={56} height={32} />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap"><strong>JDZ</strong> Portafolio</span>
                 </a>
                 {/* Botón hamburguesa (mobile) */}
@@ -68,7 +68,7 @@ export default function Navbar() {
                         <li className="relative group" onMouseLeave={() => setIsDropdownDataCiens(false)}>
                             <button onClick={() => setIsDropdownDataCiens(!isDropdownDataCiens)}
                                 className="flex items-center justify-between w-full py-2 text-gray-900 rounded-sm dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.0" stroke="currentColor" class="size-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.0" stroke="currentColor" className="size-8">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z" />
                                 </svg>
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm px-2 py-1 rounded-lg whitespace-nowrap z-10">
@@ -105,8 +105,8 @@ export default function Navbar() {
                         <li className="relative group" onMouseLeave={() => setIsDropdownOpen(false)}>
                             <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 className="flex items-center justify-between w-full py-2 text-gray-900 rounded-sm dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.0" stroke="currentColor" class="size-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.0" stroke="currentColor" className="size-8">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
                                 </svg>
 
                                 <span className="absolute top-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-white text-sm px-2 py-1 rounded-lg whitespace-nowrap z-10">
