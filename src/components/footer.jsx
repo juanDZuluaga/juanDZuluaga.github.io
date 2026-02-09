@@ -20,7 +20,9 @@ function dataFooter() {
                             <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
                         </svg>
                     </a>
-                    <p className=" pl-1 text-center text-xs md:text-base text-zinc-800"><strong>© 2024 Mi Portfolio. Todos los derechos reservados.</strong></p>
+                    <p className=" pl-1 text-center text-xs md:text-base text-zinc-800"><strong>© 2024 Mi Portfolio. Todos los derechos reservados.</strong><br />
+                        "todos los contenidos des esta pagina son esclusivos. mi portafolio es sometiod contatemente para la experiencia del ususario"
+                    </p>
                 </div>
             </div>
         </footer>

@@ -50,10 +50,10 @@ export default function PersonalProject() {
 
                     <div className="m-2 floating-container lg:mt-10 mt-0 flex flex-wrap justify-center md:justify-start gap-2 ">
                         <a href="https://citopolis.com/terque/user/public/index.php" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition" target="_blank" rel="noopener noreferrer">
-                            <span className="ml-2 text-zinc-900"><strong>TERQUE</strong></span>
+                            <span className="ml-2 text-zinc-900"><strong>Terque</strong></span>
                         </a>
-                        <a href="https://wa.me/3002965927" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition">
-                            <span className="ml-2 text-zinc-900"><strong>Autogestion practic</strong></span>
+                        <a href="https://clientes.famicredito.com/credit_application" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition">
+                            <span className="ml-2 text-zinc-900"><strong>Solic. crédito Practic</strong></span>
                         </a>
                         <a href="https://www.practic.com.co/es/" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition">
                             <span className="ml-2 text-zinc-900"><strong>Practic</strong></span>
