@@ -119,15 +119,14 @@ export default function ThreeDi() {
                         </div>
                     </div>
                 </div>
-                
             </section>
-         </main>
-         <DataFooter />
-         <div className="z-[100] flex flex-col items-end gap-4 pointer-events-auto fixed bottom-6 right-6">
+        </main>
+        <DataFooter />
+        <div className="z-[100] flex flex-col items-end gap-4 pointer-events-auto fixed bottom-6 right-6">
             <SoundToggleButton isMuted={isMuted} toggleMute={toggleMute} />
             <ThemeToggle />
-         </div>
-         <BubbleCursor isMuted={isMuted} />
+        </div>
+        <BubbleCursor isMuted={isMuted} />
       </div>
     );
 }
