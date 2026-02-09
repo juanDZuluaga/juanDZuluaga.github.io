@@ -21,24 +21,43 @@ export default function ThreeDi() {
   }, [isMuted]);
 
      return (
-    <div className="min-h-screen flex flex-col">
+    <div>
       <Navbar />
 
-      <main className="grow pb-32">
-        <h1>Diseños 3D</h1>
+      <main className=" justify-center min-h-screen flex-col">
+          <div className="flex justify-center ">
+            <div className=" text-center max-w-5xl bg-stone-700 text-zinc-50 p-8 md:p-12 m-6 rounded-xl shadow-lg lg:mb-20 mt-20  transition-transform duration-700 ease-out hover:scale-105">
+              <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
+              Perfil Profesional
+              </h1>
+              {/* PERFIL */}
+              <p className="p-alt">
+                  Diseñé y desarrollé estas <strong>creaciones 3D </strong>combinando creatividad
+                  y técnica, explorando modelos, animaciones y escenas interactivas que muestran 
+                  cómo el diseño digital puede cobrar vida. Cada proyecto fue pensado para 
+                  experimentar formas, movimiento y perspectiva, reflejando tanto 
+                  funcionalidad como estética.< br />< br />
+                  Estos trabajos son ejemplos de cómo aplico herramientas y conceptos de diseño 
+                  3D para crear experiencias visuales únicas y llamativas, listas para ser
+                  exploradas y apreciadas directamente en la web.
+              </p>
+            </div>
+          </div>
+          {/* Aquí podrías agregar tus proyectos 3D, por ejemplo: */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <div className="bg-blue-500 text-white p-6 text-center">Div 1</div>
+            <div className="bg-green-500 text-white p-6 text-center">Div 2</div>
+            <div className="bg-red-500 text-white p-6 text-center">Div 3</div>
+          </div>
+          <DataFooter />
+          {/* Floating buttons */}
+          <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+          <SoundToggleButton isMuted={isMuted} toggleMute={() => setIsMuted((v) => !v)}/>
+          <ThemeToggle />
+          </div>
+
+          <BubbleCursor isMuted={isMuted} />
       </main>
-
-      <DataFooter />
-
-      <div className="fixed bottom-6 right-6 z-100 flex flex-col gap-4">
-        <SoundToggleButton
-          isMuted={isMuted}
-          toggleMute={() => setIsMuted(v => !v)}
-        />
-        <ThemeToggle />
-      </div>
-
-      <BubbleCursor isMuted={isMuted} />
     </div>
   );
 }
