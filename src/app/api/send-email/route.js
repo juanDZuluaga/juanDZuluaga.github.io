@@ -20,7 +20,7 @@ export async function POST(req) {
       from: `"Formulario Portfolio" <${process.env.MAILER_USER}>`,
       to: process.env.MAILER_TO,
       subject: `Nuevo mensaje de ${name}`,
-      text: 
+      text:
       `
         Nombre: ${name}
         Compañía: ${company}

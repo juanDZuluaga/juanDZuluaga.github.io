@@ -251,6 +251,16 @@ body {
   }
 }
 
+/* variante SOLO para este caso */
+.p-alt {
+  color: #d7dadf; /* claro */
+}
+
+.dark .p-alt {
+  color: #dfdfe2; /* oscuro */
+}
+
+
 .card-bg-one {
   background-color: var(--while);
   padding: 2.2cqw;
@@ -433,3 +443,46 @@ i{
     color: aliceblue;
 }
 
+/*--------- ANIMACIONES CARD Y IMAGENES==========*/
+
+
+/* ondulaciones card*/
+@keyframes jelly {
+   0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.04, 0.96);
+  }
+  55% {
+    transform: scale(0.98, 1.02);
+  }
+  75% {
+    transform: scale(1.02, 0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-jelly {
+  will-change: transform;
+}
+
+.card-jelly:hover {
+  animation: jelly 0.8s ease-in-out;
+}
+
+@keyframes swing-hover {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.swing-hover:hover {
+  animation: swing-hover 1s ease-in-out;
+  transform-origin: top center; /* gira desde la parte superior */
+}
+/*--------- END ANIMACIONES CARD Y IMAGENES==========*/
