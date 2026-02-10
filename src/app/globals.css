@@ -263,7 +263,7 @@ body {
 }
 
 .span-alt {
-  color: ##FF8904; /* claro */
+  color: #FF8904; /* claro */
 }
 
 .dark .span-alt {
@@ -274,8 +274,8 @@ body {
 .card-bg-one {
   background-color: var(--while);
   padding: 2.2cqw;
-  width: 70%;
-  height: 300px;
+  /* width: 70%;
+  height: 300px; */
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;

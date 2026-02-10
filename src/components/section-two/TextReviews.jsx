@@ -122,21 +122,20 @@ export default function TextReviews() {
     const Icon = quotes[index].icon;
 
     return (
-        <div className="flex items-center justify-center md:mt-10">
-        <div className="card-bg-one space-y-4 text-center">
-            <p className="text-[clamp(1rem,4cqw,2rem)] leading-relaxed">
-            <span className="flex justify-center mb-4">
-                {Icon && <Icon className="text-amber-500" />}
-            </span>
-
-            <strong className="text-amber-500">“ </strong>
-            <strong className="text-amber-500 bg-zinc-900 dark:bg-amber-500 dark:text-zinc-900 px-2 rounded">
-                {quotes[index].text}
-            </strong>
-            {quotes[index].highlight}
-            <strong className="text-amber-500"> ”</strong>
-            </p>
-        </div>
+        <div className="flex items-center justify-center pt-0 lg:pt-30 pl-0 md:pl-10 pr-0 md:pr-10 mb-5 lg:mb-0">
+            <div className="card-bg-one space-y-4 text-center h-35 lg:h-65">
+                <p className="text-[clamp(1rem,4cqw,2rem)] leading-relaxed">
+                <span className="flex justify-center mb-4">
+                    {Icon && <Icon className="text-amber-500" />}
+                </span>
+                <strong className="text-amber-500">“ </strong>
+                <strong className="text-amber-500 bg-zinc-900 dark:bg-amber-500 dark:text-zinc-900 px-2 rounded">
+                    {quotes[index].text}
+                </strong>
+                {quotes[index].highlight}
+                <strong className="text-amber-500"> ”</strong>
+                </p>
+            </div>
         </div>
     );
 }

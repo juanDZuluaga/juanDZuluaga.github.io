@@ -46,7 +46,7 @@ export default function ThreeDi() {
               </div>
             </div>
             {/* Aquí podrías agregar tus proyectos 3D, por ejemplo: */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
               {/* Video 1 */}
               <div className="bg-stone-700 text-white p-6 text-center rounded-xl overflow-hidden">
                 <div className="relative w-full aspect-video">
