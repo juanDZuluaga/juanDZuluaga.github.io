@@ -21,7 +21,7 @@ function dataFooter() {
                         </svg>
                     </a>
                     <p className=" pl-1 text-center text-xs md:text-base text-zinc-800"><strong>© 2024 Mi Portfolio. Todos los derechos reservados.</strong><br />
-                        "todos los contenidos des esta pagina son esclusivos. mi portafolio es sometiod contatemente para la experiencia del ususario"
+                        "Todos los contenidos de esta página son exclusivos. Mi portafolio se actualiza constantemente para mejorar la experiencia del usuario"
                     </p>
                 </div>
             </div>
