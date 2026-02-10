@@ -43,7 +43,7 @@ function AboutMe() {
                         {AboutMe ? "Ocultar Más" : "Ver Más"}
                     </button>
                     <a
-                        href="/dashboard/professional_profile"
+                        href="/dashboard/about_me"
                         className="mt-6 inline-block px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition ml-10"
                     >
                         Ver perfil profesional
