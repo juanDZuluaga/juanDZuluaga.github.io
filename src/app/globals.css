@@ -195,7 +195,8 @@ body {
   --h1-color: #1e1e1e;
   --h2-color:#fffefe;
   --p-color:#383838;
-   --foreground: #151212;  
+  --foreground: #151212;
+  
   --bg-image: url("/images/funds/dark_yellow.png");
 
 }
@@ -259,6 +260,14 @@ body {
 
 .dark .p-alt {
   color: #dfdfe2; /* oscuro */
+}
+
+.span-alt {
+  color: ##FF8904; /* claro */
+}
+
+.dark .span-alt {
+  color: #27272A; /* oscuro */
 }
 
 

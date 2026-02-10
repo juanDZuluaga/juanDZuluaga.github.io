@@ -15,7 +15,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Image className="" src="/logos/oscuro-jdz.png"  alt="Logo" width={56} height={32} />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap"><strong>JDZ</strong> Portafolio</span>
+                    <span className="span-alt self-center text-2xl font-semibold whitespace-nowrap"><strong>JDZ</strong> Portafolio</span>
                 </a>
                 {/* Botón hamburguesa (mobile) */}
                 <button onClick={() => setIsOpen(!isOpen)}
