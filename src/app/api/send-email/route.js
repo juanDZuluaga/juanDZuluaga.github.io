@@ -6,14 +6,24 @@ export async function POST(req) {
     const { name, company, phone, email, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      host: process.env.MAILER_HOST,
-      port: Number(process.env.MAILER_PORT),
-      secure: false, // 587 + STARTTLS automático
+      host: "smtp.mailersend.net",
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.MAILER_USER,
         pass: process.env.MAILER_PASS,
       },
     });
+
+    // const transporter = nodemailer.createTransport({
+    //   host: process.env.MAILER_HOST,
+    //   port: Number(process.env.MAILER_PORT),
+    //   secure: false, // 587 + STARTTLS automático
+    //   auth: {
+    //     user: process.env.MAILER_USER,
+    //     pass: process.env.MAILER_PASS,
+    //   },
+    // });
 
     await transporter.sendMail({
       from: `"Formulario Portfolio" <${process.env.MAILER_USER}>`,
