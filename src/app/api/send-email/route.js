@@ -8,41 +8,39 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: process.env.MAILER_HOST,
       port: Number(process.env.MAILER_PORT),
-      secure: false, // correcto para 587
-      requireTLS: true, // 👈 CLAVE
+      secure: false, // 587 + STARTTLS automático
       auth: {
         user: process.env.MAILER_USER,
-        pass: process.env.MAILER_PASS
-      }
+        pass: process.env.MAILER_PASS,
+      },
     });
 
-    const mailOptions = {
+    await transporter.sendMail({
       from: `"Formulario Portfolio" <${process.env.MAILER_USER}>`,
       to: process.env.MAILER_TO,
+      replyTo: email, // 👈 buena práctica
       subject: `Nuevo mensaje de ${name}`,
-      text:
-      `
-        Nombre: ${name}
-        Compañía: ${company}
-        Teléfono: ${phone}
-        Email: ${email}
+      text: `
+Nombre: ${name}
+Compañía: ${company}
+Teléfono: ${phone}
+Email: ${email}
 
-        Mensaje: ${message}
-      `
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    return new Response(JSON.stringify({ message: "Email enviado correctamente" }), { status: 200 });
-  } catch (error) {
-    console.error("ERROR SEND EMAIL:", error);
+Mensaje:
+${message}
+      `,
+    });
 
     return new Response(
-      JSON.stringify({
-        message: "Error al enviar el email ❌",
-        error: error.message
-      }),
+      JSON.stringify({ message: "Email enviado correctamente" }),
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("ERROR SEND EMAIL:", error);
+    return new Response(
+      JSON.stringify({ message: "Error al enviar el email" }),
       { status: 500 }
     );
   }
 }
+
