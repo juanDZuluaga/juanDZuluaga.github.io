@@ -19,7 +19,7 @@ function AboutMe() {
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:p-4 p-0">
                 {/* 1 */}
-                <div className="p-6 text-center rounded-xl overflow-hidden">
+                <div className="lg:p-6 text-center rounded-xl overflow-hidden">
                     <div className="flex justify-center items-center">
                         <p className="text-lg md:text-xl leading-relaxed text-justify">
                             <strong>Desarrollador Full Stack </strong> con experiencia en el desarrollo de plataformas web en producción para sectores como salud, 
@@ -38,7 +38,7 @@ function AboutMe() {
                     </div>
                 </div>
                 {/* 2 */}
-                <div className=" text-center rounded-xl overflow-hidden ">
+                <div className="lg:p-6 text-center rounded-xl overflow-hidden ">
                     <div className="rounded-lg ">
                         <TextReviews />
                         <button onClick={() => setAboutMe(!AboutMe)} className="mt-6 px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition">
