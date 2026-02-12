@@ -262,12 +262,48 @@ body {
   color: #dfdfe2; /* oscuro */
 }
 
+.p-alt_two {
+  color: #2e2d2d; /* claro */
+}
+
+.dark .p-alt_two {
+  color: #cfcfd1; /* oscuro */
+}
+
 .span-alt {
   color: #FF8904; /* claro */
 }
 
 .dark .span-alt {
   color: #27272A; /* oscuro */
+}
+
+.col_bt_a {
+  background-color: #27272A;
+  color: #fab361; /* claro */
+}
+
+hover .col_bt_a {
+  background-color: #44444b;
+}
+
+.dark .col_bt_a {
+  background-color: #FF8904;
+  color: #27272A; /* oscuro */
+}
+
+:hover .dark .col_bt_a {
+  background-color: #dd8521;
+}
+
+.ex_text {
+  background-color: #27272A;
+  color: #fab361; 
+}
+
+.dark .ex_text {
+  background-color: #FF8904;
+  color: #27272A; 
 }
 
 
@@ -496,3 +532,12 @@ i{
   transform-origin: top center; /* gira desde la parte superior */
 }
 /*--------- END ANIMACIONES CARD Y IMAGENES==========*/
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+

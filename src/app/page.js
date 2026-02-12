@@ -9,6 +9,7 @@ import FormContactMe from "@/components/contactMe";
 import DataFooter from "@/components/footer";
 import AboutMe from "@/components/section-two/AboutMe";
 import Slinder from "@/components/selectSlinder";
+import Development from "@/components/development";
 
 export default function Home() {
    // opcional: persistir en localStorage
@@ -61,6 +62,9 @@ export default function Home() {
                      <Slinder />
                   </div>
                </div>
+            </section>
+            <section className="lg:mb-20 mb-15">
+               < Development />
             </section>
             <section className="lg:mb-30 mb-15">
                <AboutMe />
