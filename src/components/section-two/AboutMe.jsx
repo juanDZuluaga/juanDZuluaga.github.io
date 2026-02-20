@@ -14,7 +14,7 @@ function AboutMe() {
         <div id="sobreMi" className=" text-center">
             <h1 className="text-2xl md:text-5xl text-center col-span-full pt-10  pb-11">
                 <strong className="text-gray-50 dark:text-zinc-900 p-1 bg-amber-500 rounded ">
-                    Informacion sobre mi
+                Informacion sobre mi
                 </strong>
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:p-4 p-0">
@@ -22,7 +22,7 @@ function AboutMe() {
                 <div className="lg:p-6 text-center rounded-xl overflow-hidden">
                     <div className="flex justify-center items-center">
                         <p className="text-lg md:text-xl leading-relaxed text-justify">
-                            <strong>Desarrollador Full Stack </strong> con experiencia en el desarrollo de plataformas web en producción para sectores como salud, 
+                            <strong>Desarrollador Full Stack </strong>con experiencia en el desarrollo de plataformas web en producción para sectores como salud, 
                             fintech y servicios empresariales, participando en todas las etapas del ciclo de vida del software: análisis, desarrollo, 
                             integración y mantenimiento.<br/>
                             Formación universitaria con fuerte enfoque en Python aplicado a Inteligencia Artificial, lo que me permitió adquirir bases 

@@ -125,15 +125,10 @@ export default function Navbar() {
                                                 Figma (Interfaces)
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="/dashboard/Interactive_prototypes" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-amber-500 dark:hover:text-white">
-                                                Algunos Desarrollos
-                                            </a>
-                                        </li>
                                     </ul>
                                     <div className="py-1">
-                                        <a href="/dashboard/design_system" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-amber-500 dark:text-gray-200 dark:hover:text-white">
-                                            Designs - Diseños
+                                        <a href="/dashboard/Interactive_prototypes" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-amber-500 dark:text-gray-200 dark:hover:text-white">
+                                            Algunos Desarrollos
                                         </a>
                                     </div>
                                 </div>

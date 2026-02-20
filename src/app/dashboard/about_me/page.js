@@ -26,124 +26,174 @@ export default function MyProfessionalProfile() {
 
         <main className="min-h-screen flex flex-col">
             <section className="grow flex justify-center">
-            <div className=" text-center max-w-5xl w-full bg-stone-700 text-zinc-50 p-8 md:p-12 m-6 rounded-xl shadow-lg mb-20">
+            <div className=" max-w-5xl w-full bg-stone-700 text-zinc-50 p-8 md:p-12 m-6 rounded-xl shadow-lg mb-20">
                 <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
                 Perfil Profesional
                 </h1>
-
                 {/* PERFIL */}
                 <section className="space-y-4 text-base md:text-lg leading-relaxed">
-                <p>
-                    <strong>Desarrollador Full Stack</strong> con experiencia en el
-                    desarrollo de plataformas web en producción para sectores como
-                    salud, fintech y servicios empresariales, participando en todas
-                    las etapas del ciclo de vida del software: análisis, desarrollo,
-                    integración y mantenimiento.
-                </p>
-
-                <p>
-                    Formación universitaria con fuerte enfoque en{" "}
-                    <strong>Python aplicado a Inteligencia Artificial</strong>,
-                    adquiriendo bases sólidas en lógica, análisis de datos,
-                    automatización y desarrollo de soluciones orientadas a la toma de
-                    decisiones.
-                </p>
-
-                <p>
-                    Especializado en el desarrollo de APIs, automatización de
-                    procesos, generación de reportes contables y gestión de datos,
-                    integrando frontend moderno con backend robusto.
-                </p>
-
-                <p>
-                    <strong>Tecnologías clave:</strong> PHP (Laravel, CodeIgniter),
-                    JavaScript (Vue.js, React, Next.js), Python (Flask, FastAPI,
-                    fundamentos de IA y automatización), bases de datos SQL y NoSQL.
-                </p>
+                    <p className="p-alt">
+                        Ingeniero de Sistemas en formación y <strong>Full Stack Developer </strong> con 
+                        experiencia desarrollando soluciones digitales para plataformas fintech, 
+                        healthtech y marketplace en entornos de producción. He participado en la 
+                        construcción de funcionalidades end-to-end, desde la modernización de 
+                        interfaces y experiencia de usuario hasta la implementación de 
+                        lógica backend y optimización de bases de datos en PostgreSQL.
+                    </p>
+                    <p className="p-alt">
+                        Cuento con experiencia trabajando con {" "}
+                        <strong>grandes volúmenes de información </strong>,
+                        (más de 95.000 usuarios y 300.000 créditos gestionados), desarrollando 
+                        consultas SQL avanzadas, optimizando rendimiento mediante índices y 
+                        automatizando procesos operativos con n8n (JavaScript + PostgreSQL), 
+                        reduciendo tiempos manuales en operaciones críticas.
+                    </p>
+                    <p className="p-alt">
+                        (más de 95.000 usuarios y 300.000 créditos gestionados), desarrollando
+                        consultas SQL avanzadas, optimizando rendimiento mediante índices y 
+                        automatizando procesos operativos con n8n (JavaScript + PostgreSQL),
+                        reduciendo tiempos manuales en operaciones críticas.
+                    </p>
+                    <p className="p-alt">
+                        <strong>Tecnologías clave:</strong> PHP (Laravel, CodeIgniter),
+                        JavaScript (Vue.js, React, Next.js), Python (Flask, FastAPI,
+                        fundamentos de IA y automatización), bases de datos SQL, NoSQL ypostgres.
+                    </p>
                 </section>
-
                 {/* ESTUDIOS */}
                 <section className="mt-12">
-                <h2 className="text-2xl font-semibold mb-4">Estudios</h2>
-                <ul className="space-y-3 list-disc list-inside">
-                    <li>
-                    <strong>Ingeniería de Sistemas</strong> – Universidad Uka
-                    (CDMX, México) <br />
-                    <span className="text-sm opacity-80">
-                        En curso · Finalización estimada: diciembre 2026
-                    </span>
-                    </li>
-                    <li>
-                    <strong>Técnico en Programación de Software</strong> – CENSA
-                    (Medellín, Colombia) <br />
-                    <span className="text-sm opacity-80">
-                        Febrero 2022 – Junio 2022 · Enfoque en desarrollo web
-                    </span>
-                    </li>
-                </ul>
+                    <h2 className="text-2xl font-semibold mb-4">Educación</h2>
+                    <ul className="space-y-3 list-disc list-inside">
+                        <li>
+                            <strong>Ingeniería de Sistemas</strong> – Universidad Uka
+                            (CDMX, México) <br />
+                            <span className="text-sm opacity-80">
+                                En curso · Finalización estimada: junio de  2026
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Técnico en Programación de Software</strong> – CENSA
+                            (Medellín, Colombia) <br />
+                            <span className="text-sm opacity-80">
+                                Febrero 2023 – Diciembre 2023 · Enfoque en desarrollo web
+                            </span>
+                        </li>
+                    </ul>
                 </section>
 
                 {/* CURSOS */}
                 <section className="mt-12">
-                <h2 className="text-2xl font-semibold mb-4">
-                    Cursos y Certificaciones
-                </h2>
-
-                <ul className="space-y-2 list-disc list-inside">
-                    <li>Maestría en Análisis de Datos (Python, SQL, ML, Power BI) – Udemy</li>
-                    <li>Fundamentos de IA para Data y Machine Learning – Platzi</li>
-                    <li>Curso Básico de JavaScript – Platzi</li>
-                    <li>Desarrollo móvil con JavaScript – Coursera</li>
-                    <li>Three.js: 3D en el navegador – Udemy</li>
-                    <li>Árboles y grafos – Coursera</li>
-                    <li>Figma: Prototipado e Interfaces – Platzi</li>
-                </ul>
+                    <h2 className="text-2xl font-semibold mb-4">
+                        Formación complementaria
+                    </h2>
+                    <ul className="space-y-3 list-disc list-inside">
+                        <li>
+                            <strong>Análisis de Datos y Business Intelligence: </strong>
+                            <span className="text-sm opacity-80">
+                                Python, SQL, Power BI, fundamentos de Machine Learning.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Desarrollo y Arquitectura Web: </strong>
+                            <span className="text-sm opacity-80">
+                                JavaScript, desarrollo frontend, estructuras de datos y patrones básicos.
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Diseño y UX/UI: </strong>
+                            <span className="text-sm opacity-80">
+                                Prototipado en Figma y diseño de interfaces orientadas a producto.
+                            </span>
+                        </li>
+                    </ul>
                 </section>
 
                 {/* EXPERIENCIA */}
                 <section className="mt-12">
-                <h2 className="text-2xl font-semibold mb-6">
-                    Experiencia Profesional
-                </h2>
+                    <h2 className="text-2xl font-semibold mb-6">
+                        Experiencia Profesional
+                    </h2>
 
-                <div className="space-y-6">
-                    <div>
-                    <h3 className="font-semibold">
-                        We Are Making – Full Stack Developer (Remoto)
-                    </h3>
-                    <p className="text-sm opacity-80 mb-2">
-                        Septiembre 2024 – Actualidad
-                    </p>
-                    <ul className="list-disc list-inside space-y-1">
-                        <li>Desarrollo de módulos completos para la plataforma Practic.</li>
-                        <li>Implementación de APIs y lógica de negocio.</li>
-                        <li>Generación de reportes contables.</li>
-                        <li>Automatización con Python (Flask, CustomTkinter).</li>
-                        <li>Trabajo con Laravel, CodeIgniter, Vue.js, SQL y MongoDB.</li>
-                        <li>Metodología Scrum y documentación técnica.</li>
-                    </ul>
-                    </div>
+                    <div className="space-y-6">
+                        <div>
+                        <h3 className="font-semibold">
+                            We Are Making – Full Stack Developer (Remoto)
+                        </h3>
+                        <p className="text-sm opacity-80 mb-2">
+                            Sep 2024 – Feb 2026
+                        </p>
+                        <ul className="list-disc list-inside space-y-1">
+                            <li>
+                                Desarrollo de funcionalidades end-to-end para plataforma fintech de administración de créditos 
+                                (95.000+ usuarios y más de 300.000 créditos gestionados).
+                            </li>
+                            <li>Construcción y optimización de consultas SQL avanzadas en PostgreSQL 
+                                (JOIN múltiples, CTE, subqueries, agregaciones) para procesamiento de grandes volúmenes de datos.
+                            </li>
+                            <li>
+                                Implementación y optimización de índices para mejora de rendimiento en consultas críticas 
+                                de reporting y conciliación.
+                            </li>
+                            <li>
+                                Implementación y optimización de índices para mejora de rendimiento en consultas 
+                                críticas de reporting y conciliación.
+                            </li>
+                            <li>
+                                Desarrollo de vistas UX para flujos transaccionales y módulos de reporting dentro del CRM.
+                            </li>
+                            <li>
+                                Implementación de validaciones backend para detección de inconsistencias (pagos duplicados, 
+                                montos incorrectos, estados inconsistentes). 
+                            </li>
+                            <li>
+                                Implementación de validaciones backend para detección de inconsistencias (pagos duplicados,
+                                montos incorrectos, estados inconsistentes). 
+                            </li>
+                            <li>
+                                Corrección de bugs críticos en producción y mejora de estabilidad en módulos de reporting 
+                                bajo entornos de alta presión.
+                            </li>
+                        </ul>
+                        </div>
 
-                    <div>
-                    <h3 className="font-semibold">
-                        14 TEAM – Desarrollador Full Stack (Remoto)
-                    </h3>
-                    <p className="text-sm opacity-80 mb-2">
-                        Noviembre 2023 – Agosto 2024
-                    </p>
-                    <ul className="list-disc list-inside space-y-1">
-                        <li>Plataformas para sector salud.</li>
-                        <li>Proyectos fintech como click.money.</li>
-                        <li>Mejora de UX para Banco Cajamorelia.</li>
-                        <li>Diseño de prototipos en Figma.</li>
-                        <li>Comunicación directa con clientes.</li>
-                    </ul>
+                        <div>
+                            <h3 className="font-semibold">
+                                14 TEAM – Desarrollador Full Stack (Remoto)
+                            </h3>
+                            <p className="text-sm opacity-80 mb-2">
+                                Diciembre 2023 – Agosto 2024
+                            </p>
+                            <ul className="list-disc list-inside space-y-1">
+                                <li>
+                                    Desarrollo de funcionalidades end-to-end para plataformas en sectores healthtech, 
+                                    fintech y marketplace (modelo tipo Airbnb para mascotas).
+                                </li>
+                                <li>
+                                    Implementación de lógica backend y desarrollo de interfaces frontend modernas orientadas a experiencia de usuario.
+                                </li>
+                                <li>
+                                    Rediseño y modernización completa de interfaz CRM legacy, mejorando usabilidad y claridad en flujos operativos.
+                                </li>
+                                <li>
+                                    Desarrollo de vistas UX para flujos de solicitud de créditos y adaptación a sistemas CRM.
+                                </li>
+                                <li>
+                                    Participación en proyectos de administración de clínicas, implementando mejoras funcionales
+                                    basadas en feedback directo de usuarios
+                                </li>
+                                <li>
+                                    Levantamiento y traducción de requerimientos de negocio a soluciones técnicas viables. 
+                                </li>
+                                <li>
+                                    Resolución de bugs críticos en producción y mejoras iterativas bajo metodologías ágiles.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
                 </section>
                 <div className="flex justify-center mt-20">
                 <a
-                href="/pdf/hoja%20de%20vida%20Juan%20David%20Zuluaga.pdf"
+                href="/pdf/JuanDavidZuluagaCV.pdf"
                 download
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3
                             bg-amber-500 text-zinc-900 font-semibold
