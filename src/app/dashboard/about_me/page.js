@@ -23,7 +23,6 @@ export default function MyProfessionalProfile() {
     return (
         <div>
         <Navbar />
-
         <main className="min-h-screen flex flex-col">
             <section className="grow flex justify-center">
             <div className=" max-w-5xl w-full bg-stone-700 text-zinc-50 p-8 md:p-12 m-6 rounded-xl shadow-lg mb-20">

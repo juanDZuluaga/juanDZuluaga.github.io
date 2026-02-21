@@ -46,15 +46,17 @@ export default function Home() {
                <div className="grid grid-cols-1 md:grid-cols-2 items-start lg:gap-2">
                   <div className="">
                      <h1 className="text-7xl md:text-9xl font-bold mb-8 text-shadow"><strong>Juan <br /> David <br /> Zuluaga</strong></h1>
-                     <h2 className="text-2xl md:text-4xl mb-8">
+                     <h2 className="text-2xl md:text-4xl mb-8 text-center">
                         Desarrollador Web{" "}
                         <strong className="text-amber-500 bg-zinc-900 dark:text-zinc-900 dark:bg-amber-500 p-1 rounded shadow">
-                           front-end
+                           full Stack Developer
                         </strong>{" "}
-                           full Stack y <br />
-                        <strong className="block mt-4 text-center text-amber-500 bg-zinc-900 dark:text-zinc-900 dark:bg-amber-500 p-1 rounded shadow md:w-1/3 w-1/2 mx-auto">
-                           Data Science
-                        </strong>
+                           con experiencia en <br />
+                        <div className="ml-4">
+                           <strong className="mt-5 text-center text-xl text-amber-500 bg-zinc-900 dark:text-zinc-900 dark:bg-amber-500 p-1 rounded shadow md:w-1/3 w-1/2 mx-auto ">
+                              plataformas fintech, healthtech y marketplace en entornos de producción
+                           </strong>
+                        </div>
                      </h2>
                      <p className="text-lgtext-shadow">Bienvenido a mi portafolio. Aquí encontrarás una selección de mis proyectos y habilidades en desarrollo web.</p>
                   </div>

@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Home() {
   const slides = [
+    { src: "/images/disenoUXIU.jpg", text: "Diseño de Interfaces" },
+    { src: "/images/disenoautomtizacionreportes.png", text: "Reportes y automatizaciones" },
     { src: "/images/6.Figma.png", text: "Figma" },
-    { src: "/images/Diseno-Interfaces.png", text: "Diseño de Interfaces" },
-    { src: "/images/Portafolio.png", text: "Portafolio" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

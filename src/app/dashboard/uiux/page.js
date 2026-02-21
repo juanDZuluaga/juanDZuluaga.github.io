@@ -114,7 +114,6 @@ export default function UiUx() {
                   </h1><br></br>
                   <p>
                     Creé diagramas de flujo y user flows para definir la experiencia<br />
-                    Creé diagramas de flujo y user flows para definir la experiencia<br />
                     Desarrollé wireframes y prototipos interactivos<br />
                     Apliqué principios de UX/UI orientados a negocio<br />
                     Preparé los diseños para una implementación directa en frontend
