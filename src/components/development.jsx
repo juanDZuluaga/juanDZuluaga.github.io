@@ -5,12 +5,10 @@ import Image from "next/image";
 
 function AboutDevelopmentData() {
     const [Clicmony, setClicmony] = useState(false);
+    const [Practic, setPractic] = useState(false);
 
     return (
-<div
-  id="sobreMi"
-  className=" bg-zinc-700/30 text-center h-screen overflow-y-scroll no-scrollbar p-4"
->
+    <div id="sobreMi" className=" text-center p-4">
      <h1 className="text-2xl md:text-5xl col-span-full pt-10 pb-11">
         <strong className="ex_text rounded pl-5 pr-5">
             Mi crecimiento como Desarrollador Full Stack
@@ -24,8 +22,12 @@ function AboutDevelopmentData() {
                 <strong>ClicMoney – Plataforma de solicitud de créditos</strong>
             </h2>
             <div className="text-lg md:text-xl leading-relaxed text-justify space-y-3">
-                <p><strong>Rol:</strong> Full Stack Developer</p>
-                <p><strong>Stack:</strong> Laravel 12, Vue.js, PostgreSQL, MySQL, JWT</p>
+                <p>
+                    <strong>Rol:</strong> Full Stack Developer
+                </p>
+                <p>
+                    <strong>Stack:</strong> Laravel 12, Vue.js, PostgreSQL, MySQL, JWT
+                </p>
                 <p>
                     <strong>Problema:</strong> Las personas necesitaban comparar y solicitar
                     créditos de forma digital con múltiples bancos, evitando procesos manuales.
@@ -40,7 +42,7 @@ function AboutDevelopmentData() {
                     </ul>
                 </div>
             </div>
-            <button onClick={() => setClicmony(!Clicmony)} className="mt-6 px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition">
+            <button onClick={() => setClicmony(!Clicmony)} className="mt-6 px-4 py-2 col_bt_a  rounded shadow hover:bg-amber-600 transition">
                 {Clicmony ? "Ocultar más" : "Ver más"}
             </button>
             {Clicmony && (
@@ -116,10 +118,10 @@ function AboutDevelopmentData() {
                             </ul>
                         </div>
                     </div>
-                    <button onClick={() => setClicmony(!Clicmony)} className="mt-6 px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition">
-                        {Clicmony ? "Ocultar más" : "Ver más"}
+                    <button onClick={() => setPractic (!Practic)} className="mt-6 px-4 py-2 col_bt_a rounded shadow hover:bg-amber-600 transition">
+                        {Practic ? "Ocultar más" : "Ver más"}
                     </button>
-                    {Clicmony && (
+                    {Practic && (
                         <div className="mt-4 text-lg md:text-xl leading-relaxed text-justify space-y-3">
                             <div>
                                 <strong>Lo que desarrollé específicamente:</strong>
