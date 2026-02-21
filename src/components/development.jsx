@@ -118,7 +118,7 @@ function AboutDevelopmentData() {
                             </ul>
                         </div>
                     </div>
-                    <button onClick={() => setPractic (!Practic)} className="mt-6 px-4 py-2 col_bt_a rounded shadow hover:bg-amber-600 transition">
+                    <button onClick={() => setPractic (!Practic)} className="mt-6 px-4 py-2 col_bt_a rounded shadow transition">
                         {Practic ? "Ocultar más" : "Ver más"}
                     </button>
                     {Practic && (

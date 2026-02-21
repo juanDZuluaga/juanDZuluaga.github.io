@@ -48,18 +48,20 @@ export default function Home() {
                   <div className="">
                      <h1 className="text-7xl md:text-9xl font-bold mb-8 text-shadow"><strong>Juan <br /> David <br /> Zuluaga</strong></h1>
                      <h2 className="text-2xl md:text-4xl mb-8 text-center">
-                        Desarrollador Web{" "}
-                        <strong className="text-amber-500 bg-zinc-900 dark:text-zinc-900 dark:bg-amber-500 p-1 rounded shadow">
+                        <strong className="strong-alt">Desarrollador Web </strong>{" "}
+                        <strong className="cont_tex p-1 rounded shadow">
                            full Stack Developer
                         </strong>{" "}
-                           con experiencia en <br />
+                           <strong className="strong-alt">con experiencia en </strong><br />
                         <div className="ml-4">
-                           <strong className="mt-5 text-center text-xl text-amber-500 bg-zinc-900 dark:text-zinc-900 dark:bg-amber-500 p-1 rounded shadow md:w-1/3 w-1/2 mx-auto ">
+                           <strong className="mt-5 text-center text-xl cont_tex p-1 rounded shadow md:w-1/3 w-1/2 mx-auto ">
                               plataformas fintech, healthtech y marketplace en entornos de producción
                            </strong>
                         </div>
                      </h2>
-                     <p className="text-lgtext-shadow">Bienvenido a mi portafolio. Aquí encontrarás una selección de mis proyectos y habilidades en desarrollo web.</p>
+                     <p className="text-lgtext-shadow">
+                        <strong>Bienvenido a mi portafolio. Aquí encontrarás una selección de mis proyectos y habilidades en desarrollo web.</strong>
+                     </p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 items-start">
                      <Slinder />
@@ -69,7 +71,7 @@ export default function Home() {
             <section className="lg:mb-20 mb-15">
                <MySolution />
                <div className="text-center">
-                  <a href="/dashboard/design_system" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition text-zinc-800" target="_blank" rel="noopener noreferrer">
+                  <a href="/dashboard/design_system" className="col_bt_a rounded-xl inline-flex items-center justify-center p-1.5  transition" target="_blank" rel="noopener noreferrer">
                      Mi crecimiento como Desarrollador Full Stack
                   </a>
                </div>

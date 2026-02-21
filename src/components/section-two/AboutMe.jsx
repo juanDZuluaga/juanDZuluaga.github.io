@@ -13,7 +13,7 @@ function AboutMe() {
     return(
         <div id="sobreMi" className=" text-center">
             <h1 className="text-2xl md:text-5xl text-center col-span-full pt-10  pb-11">
-                <strong className="text-gray-50 dark:text-zinc-900 p-1 bg-amber-500 rounded ">
+                <strong className="cont_tex rounded ">
                 Informacion sobre mi
                 </strong>
             </h1>
@@ -41,10 +41,10 @@ function AboutMe() {
                 <div className="lg:p-6 text-center rounded-xl overflow-hidden ">
                     <div className="rounded-lg ">
                         <TextReviews />
-                        <button onClick={() => setAboutMe(!AboutMe)} className="mt-6 px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition">
+                        <button onClick={() => setAboutMe(!AboutMe)} className="mt-6 px-4 py-2 col_bt_a rounded shadow transition">
                             {AboutMe ? "Ocultar Más" : "Ver Más"}
                         </button>
-                        <a href="/dashboard/about_me" className="mt-6 flex justify-center inline-block px-4 py-2 bg-amber-500 text-zinc-900 rounded shadow hover:bg-amber-600 transition ml-10" >
+                        <a href="/dashboard/about_me" className="mt-6 flex justify-center inline-block px-4 py-2 col_bt_a rounded shadow transition ml-10" >
                             Ver perfil profesional
                         </a>
                         <div className={`mt-4 text-justify ${AboutMe ? "block" : "hidden"}`}>

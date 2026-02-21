@@ -48,10 +48,10 @@ export default function Home() {
       </button>
       {/* Texto */}
       <div className="absolute bottom-10 flex mb-10 hidden sm:flex">
-        <a href="#" className={`z-10 bg-amber-500 top-0 right-12 rounded-4xl text-3xl font-bold tracking-wide text-center transition-opacity duration-[1500ms] ease-in-out ${
+        <a href="#" className={`z-10 cont_tex right-12 rounded-4xl text-3xl font-bold tracking-wide text-center transition-opacity duration-[1500ms] ease-in-out ${
           fade ? "opacity-100" : "opacity-0"
         }`}>
-          <p className="text-zinc-900 p-1.5">{slides[currentIndex].text}</p>
+          <p className="cont_tex rounded-4xl p-1.5">{slides[currentIndex].text}</p>
         </a>
       </div>
       {/* Indicadores (puntos) */}

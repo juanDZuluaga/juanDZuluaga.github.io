@@ -128,12 +128,12 @@ export default function TextReviews() {
                 <span className="flex justify-center mb-4">
                     {Icon && <Icon className="text-amber-500" />}
                 </span>
-                <strong className="text-amber-500">“ </strong>
-                <strong className="text-amber-500 bg-zinc-900 dark:bg-amber-500 dark:text-zinc-900 px-2 rounded">
+                <strong className="strong-alt">“ </strong>
+                <strong className="cont_tex px-2 rounded">
                     {quotes[index].text}
                 </strong>
                 {quotes[index].highlight}
-                <strong className="text-amber-500"> ”</strong>
+                <strong className="strong-alt"> ”</strong>
                 </p>
             </div>
         </div>

@@ -278,13 +278,26 @@ body {
   color: #27272A; /* oscuro */
 }
 
+.strong-alt {
+  color: #27272A; /* claro */
+}
+
+.dark .strong-alt {
+  color: #cfcfd1; /* oscuro */
+}
+
 .col_bt_a {
   background-color: #27272A;
   color: #fab361; /* claro */
+  transition: background-color 0.18s ease, transform 0.15s ease;
+  transform-origin: center;
+  will-change: transform;
 }
 
-hover .col_bt_a {
-  background-color: #44444b;
+.col_bt_a:hover {
+  background-color: #070707;
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .dark .col_bt_a {
@@ -292,8 +305,10 @@ hover .col_bt_a {
   color: #27272A; /* oscuro */
 }
 
-:hover .dark .col_bt_a {
+.dark .col_bt_a:hover {
   background-color: #dd8521;
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .ex_text {
@@ -305,6 +320,18 @@ hover .col_bt_a {
   background-color: #FF8904;
   color: #27272A; 
 }
+
+/* container_color */
+.cont_tex {
+  background-color: #27272A;
+  color: #fab361; /* claro */
+}
+
+.dark .cont_tex {
+  background-color: #FF8904;
+  color: #27272A; /* oscuro */
+}
+/* end container_color */
 
 
 .card-bg-one {
