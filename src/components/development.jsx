@@ -150,7 +150,6 @@ function AboutDevelopmentData() {
                     <strong>Ver más</strong>
                 </a>
             </div>
-            
         </div>
     );
 }

@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { useEffect, useState } from "react";
 import SolarSystem from "@/components/SolarSystem";
 import BubbleCursor from "@/components/BubbleCursor";
@@ -9,7 +9,8 @@ import FormContactMe from "@/components/contactMe";
 import DataFooter from "@/components/footer";
 import AboutMe from "@/components/section-two/AboutMe";
 import Slinder from "@/components/selectSlinder";
-import Development from "@/components/development";
+import MySolution from "@/components/MySolution";
+// import Development from "@/components/development";
 
 export default function Home() {
    // opcional: persistir en localStorage
@@ -66,7 +67,13 @@ export default function Home() {
                </div>
             </section>
             <section className="lg:mb-20 mb-15">
-               < Development />
+               <MySolution />
+               <div className="text-center">
+                  <a href="/dashboard/design_system" className="inline-flex items-center justify-center p-1.5 bg-amber-500 rounded-4xl hover:bg-amber-400 transition text-zinc-800" target="_blank" rel="noopener noreferrer">
+                     Mi crecimiento como Desarrollador Full Stack
+                  </a>
+               </div>
+              
             </section>
             <section className="lg:mb-30 mb-15">
                <AboutMe />
