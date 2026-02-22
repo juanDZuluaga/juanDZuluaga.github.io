@@ -149,7 +149,7 @@ function AboutDevelopmentData() {
             </div>
             <div className="lg:mt-10 mt-20 text-center lg:mb-15 mb-10">
                 <a href="/dashboard/Interactive_prototypes" className="col_bt_a p-4 rounded-full"  target="_blank" rel="noopener noreferrer" >
-                    <strong>Ver más</strong>
+                    <strong>Ver más de mi trabajo</strong>
                 </a>
             </div>
         </div>
